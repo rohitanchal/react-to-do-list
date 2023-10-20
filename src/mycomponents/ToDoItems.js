@@ -1,9 +1,15 @@
 import React from 'react'
 
-export default function ToDoItems() {
+const ToDoItems = ({todos}) => {
   return (
     <div>
-      <h1>ToDo</h1>
+
+      <h4>{todos.title}</h4>
+      <p>{todos.desc}</p>
+      <button type="button" class="btn btn-danger">Delete</button>
+
     </div>
   )
 }
+
+export default ToDoItems

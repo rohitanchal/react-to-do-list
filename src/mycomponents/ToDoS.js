@@ -1,9 +1,15 @@
-import React from 'react'
+import React from 'react';
+import ToDoItems from "./ToDoItems";
 
-export default function ToDoS() {
+const ToDoS = (props) => {
   return (
-    <div>
-      <h1>TODOS</h1>
+    <div className='container'>
+      <h3>Todo Lists</h3>
+      {/* {props.todos} */}
+      <ToDoItems todos={props.todos[0]} />
     </div>
   )
 }
+
+export default ToDoS
+ 
