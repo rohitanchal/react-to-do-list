@@ -5,7 +5,12 @@ import Footer from "./mycomponents/Footer";
 // import ToDoItems from './mycomponents/ToDoItems';
 
 function App() {
-    let todos = [
+
+    const onDelete = (todo)=> {
+        console.log("i am onDelete of todo", todo)
+    }
+
+    let todo = [
         {
             sno: 1,
             title: "Go to the Market",
@@ -25,7 +30,7 @@ function App() {
     return (
        <>
         <Header title = "Todo List" searchBar = {false}/>
-        <ToDoS todos={todos}/>
+        <ToDoS todo={todo} onDelete={onDelete} />
         <Footer/>
         </>
     );
