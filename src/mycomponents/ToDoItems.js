@@ -6,7 +6,7 @@ const ToDoItems = ({todos}) => {
 
       <h4>{todos.title}</h4>
       <p>{todos.desc}</p>
-      <button type="button" class="btn btn-danger">Delete</button>
+      <button type="button" class="btn btn-sm btn-danger">Delete</button>
 
     </div>
   )
