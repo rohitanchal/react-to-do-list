@@ -2,15 +2,19 @@ import './App.css';
 import Header from "./mycomponents/Header";
 import ToDoS from "./mycomponents/ToDoS";
 import Footer from "./mycomponents/Footer"; 
-// import ToDoItems from './mycomponents/ToDoItems';
+import React, { useState } from 'react';
 
 function App() {
 
     const onDelete = (todo)=> {
-        console.log("i am onDelete of todo", todo)
+        console.log("i am onDelete of todo", todo);
+
+        setTodo(todo.filter((id)=>{
+            return id !== todo
+        }));
     }
 
-    let todo = [
+    const [todo, setTodo] = useState([
         {
             sno: 1,
             title: "Go to the Market",
@@ -26,7 +30,8 @@ function App() {
             title: "Go to the School",
             desc: " You need to go to the School to get the Job done3",
         }, 
-    ]
+    ]);
+
     return (
        <>
         <Header title = "Todo List" searchBar = {false}/>

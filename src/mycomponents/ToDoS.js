@@ -7,10 +7,13 @@ const ToDoS = (props) => {
     <div className='container'>
 
       <h3 className='text-center my-3'>Todo Lists</h3>
-      {props.todo.map((todo) => {
-        return <ToDoItems todo={todo} key={todo.sno} onDelete={props.onDelete} />
-      })}
 
+      {props.todo.length=== 0 ? "No Todos to Display" :  
+      props.todo.map((todo) => {
+        return <ToDoItems todo={todo} key={todo.title} onDelete={props.onDelete} />
+      })
+    }
+    
     </div>
   )
 }
